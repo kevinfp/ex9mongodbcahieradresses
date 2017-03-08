@@ -22,7 +22,6 @@ MongoClient.connect('mongodb://127.0.0.1:27017/carnet_adresse', (err, database) 
 
 app.get('/',  (req, res) => {
    console.log('la route route get / = ' + req.url)
- 
     var cursor = db.collection('adresse').find().toArray(function(err, resultat){
        if (err) return console.log(err)
     // renders index.ejs
